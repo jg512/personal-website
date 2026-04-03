@@ -93,10 +93,6 @@ function prepareAnimations() {
   const lines = terminalBody.querySelectorAll(".line, .meta, .terminal-list li");
 
   lines.forEach((line) => {
-    if (line.classList.contains("final-line")) {
-      return;
-    }
-
     line.classList.add("anim-line");
   });
 
