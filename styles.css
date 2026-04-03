@@ -1,0 +1,273 @@
+:root {
+  --bg: #050805;
+  --panel: rgba(5, 14, 5, 0.92);
+  --border: #3cff74;
+  --text: #93ff9b;
+  --text-dim: #63d86b;
+  --text-bright: #d8ffd6;
+  --amber: #ffb347;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Courier New", Courier, monospace;
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+  background:
+    radial-gradient(circle at top, rgba(60, 255, 116, 0.08), transparent 35%),
+    linear-gradient(180deg, #030603 0%, #071007 100%);
+}
+
+a {
+  color: var(--text-bright);
+}
+
+.crt {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.04) 0 2px,
+      transparent 2px 4px
+    ),
+    linear-gradient(90deg, rgba(255, 0, 0, 0.02), rgba(0, 255, 0, 0.015), rgba(0, 0, 255, 0.02));
+  opacity: 0.28;
+  mix-blend-mode: screen;
+  z-index: 30;
+}
+
+.boot-screen {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 1.5rem;
+  background: rgba(0, 0, 0, 0.96);
+  z-index: 20;
+}
+
+.boot-shell,
+.terminal-shell {
+  width: min(980px, 100%);
+  border: 2px solid var(--border);
+  background: var(--panel);
+  box-shadow: 0 0 28px rgba(60, 255, 116, 0.12), inset 0 0 28px rgba(60, 255, 116, 0.06);
+}
+
+.boot-shell {
+  padding: 1.4rem;
+}
+
+.boot-title {
+  margin: 0 0 1rem;
+  color: var(--text-bright);
+  letter-spacing: 0.12em;
+}
+
+.boot-lines p,
+.line,
+.meta,
+.terminal-list li {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.anim-line {
+  opacity: 0;
+}
+
+.anim-line.is-active,
+.anim-line.is-done {
+  opacity: 1;
+}
+
+.anim-line.is-active::after {
+  content: "_";
+  display: inline-block;
+  margin-left: 0.1rem;
+  color: var(--amber);
+  animation: blink 0.9s steps(1) infinite;
+}
+
+.boot-lines p {
+  opacity: 0;
+  animation: show-line 0.2s linear forwards;
+}
+
+.boot-lines p:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.boot-lines p:nth-child(2) {
+  animation-delay: 0.8s;
+}
+
+.boot-lines p:nth-child(3) {
+  animation-delay: 1.4s;
+}
+
+.boot-lines p:nth-child(4) {
+  animation-delay: 2s;
+}
+
+.boot-progress {
+  height: 1rem;
+  margin-top: 1.2rem;
+  border: 1px solid var(--border);
+}
+
+.boot-progress-bar {
+  height: 100%;
+  width: 100%;
+  transform-origin: left center;
+  transform: scaleX(0);
+  background: linear-gradient(90deg, var(--text-dim), var(--text-bright));
+  animation: fill-bar 3.2s steps(28) forwards;
+}
+
+.boot-note {
+  margin: 1rem 0 0;
+  color: var(--amber);
+}
+
+.terminal {
+  min-height: 100vh;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.terminal-shell {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 2rem);
+  margin: 0 auto;
+}
+
+.terminal-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid rgba(60, 255, 116, 0.35);
+  color: var(--amber);
+  text-transform: uppercase;
+}
+
+.terminal-body {
+  flex: 1;
+  overflow: visible;
+  padding: 1rem;
+  max-width: 840px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.block {
+  margin-top: 1.6rem;
+}
+
+.prompt {
+  color: var(--text-bright);
+}
+
+.prompt-label {
+  color: var(--amber);
+}
+
+.output {
+  color: var(--text);
+}
+
+.heading {
+  margin-top: 0.7rem;
+  color: var(--text-bright);
+  font-weight: 700;
+}
+
+.meta {
+  color: var(--text-dim);
+}
+
+.entry + .entry {
+  margin-top: 1rem;
+}
+
+.terminal-list {
+  margin: 0.35rem 0 0.6rem 1.4rem;
+  padding: 0;
+}
+
+.terminal-list li::marker {
+  color: var(--amber);
+}
+
+.cursor {
+  display: inline-block;
+  animation: blink 1s steps(1) infinite;
+}
+
+@keyframes show-line {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fill-bar {
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes blink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .terminal {
+    padding: 0.5rem;
+  }
+
+  .terminal-shell {
+    min-height: calc(100vh - 1rem);
+  }
+
+  .terminal-header {
+    padding: 0.7rem;
+    font-size: 0.8rem;
+  }
+
+  .terminal-body {
+    padding: 0.85rem;
+    font-size: 0.92rem;
+  }
+}

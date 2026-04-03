@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jan Victor Nino Grundl</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="crt"></div>
+
+    <main class="boot-screen" id="bootScreen" aria-live="polite">
+      <div class="boot-shell">
+        <p class="boot-title">JAN TERMINAL BIOS v1.984</p>
+        <div class="boot-lines">
+          <p>RAM CHECK .................................... OK</p>
+          <p>VIDEO SIGNAL ................................ OK</p>
+          <p>PROFILE DATA ................................ OK</p>
+          <p>LAUNCHING PERSONAL TERMINAL ................. OK</p>
+        </div>
+        <div class="boot-progress">
+          <div class="boot-progress-bar"></div>
+        </div>
+        <p class="boot-note">Boot sequence in progress. Please stand by.</p>
+      </div>
+    </main>
+
+    <section class="terminal" id="terminal">
+      <div class="terminal-shell">
+        <header class="terminal-header">
+          <span>JAN-NODE</span>
+          <span>ONLINE</span>
+          <span id="clock">--:--</span>
+        </header>
+
+        <div class="terminal-body">
+          <p class="line prompt"><span class="prompt-label">visitor@jan-terminal:~$</span> ./about_me</p>
+          <p class="line output">Loading profile...</p>
+          <p class="line output">System ready.</p>
+
+          <section class="block">
+            <p class="line prompt"><span class="prompt-label">visitor@jan-terminal:~$</span> cat contact.txt</p>
+            <p class="line output">Email: <a href="mailto:janvictorninogrundl@gmail.com">janvictorninogrundl@gmail.com</a></p>
+            <p class="line output">LinkedIn: <a href="https://linkedin.com/in/jan-victornino-grundl-722645357" target="_blank" rel="noreferrer">linkedin.com/in/jan-victornino-grundl-722645357</a></p>
+            <p class="line output">Medium: <a href="https://medium.com/@janvictorninogrundl" target="_blank" rel="noreferrer">medium.com/@janvictorninogrundl</a></p>
+            <p class="line output">GitHub: <a href="https://github.com/jg512" target="_blank" rel="noreferrer">github.com/jg512</a></p>
+          </section>
+
+          <section class="block">
+            <p class="line prompt"><span class="prompt-label">visitor@jan-terminal:~$</span> cat profile.txt</p>
+            <p class="line output">I am a Computer Science Master’s student at the University of Rostock with a strong focus on applied AI, software engineering, and responsible AI systems.</p>
+            <p class="line output">My work sits at the intersection of technical rigor, explainability, and societal impact, especially in high-stakes domains such as animal welfare and education.</p>
+            <p class="line output">I am particularly interested in how AI systems can be designed so that they are not only performant, but also understandable, trustworthy, and aligned with human and societal needs.</p>
+            <p class="line output">In addition to research and development, I care deeply about teaching, accessibility, and community engagement. I believe technology should meaningfully improve lives and not just exist as an abstract capability.</p>
+          </section>
+
+          <section class="block">
+            <p class="line prompt"><span class="prompt-label">visitor@jan-terminal:~$</span> ls current_and_future_focus/</p>
+            <ul class="terminal-list">
+              <li>Explainable AI (XAI) for real-world computer vision systems</li>
+              <li>AI-supported software engineering and code understanding</li>
+              <li>Responsible AI in sensitive and regulated domains</li>
+              <li>Teaching and mentoring in computer science and AI fundamentals</li>
+            </ul>
+          </section>
+
+          <section class="block">
+            <p class="line prompt"><span class="prompt-label">visitor@jan-terminal:~$</span> cat experience.log</p>
+            <div class="entry">
+              <p class="line output heading">(External) Student Research Assistant - AI Animal Welfare Project</p>
+              <p class="line meta">Fraunhofer IGD (via University of Rostock) | Feb 2026 - Present</p>
+              <ul class="terminal-list">
+                <li>Applied AI research in the context of animal welfare assessment</li>
+                <li>Work with computer vision and sensor data</li>
+                <li>Focus on explainability, trust, and responsible deployment of AI systems</li>
+              </ul>
+            </div>
+            <div class="entry">
+              <p class="line output heading">AI Data Annotator</p>
+              <p class="line meta">Working Student, Ossinity | Jan 2026 - Present</p>
+              <ul class="terminal-list">
+                <li>Breast cancer data annotation</li>
+              </ul>
+            </div>
+            <div class="entry">
+              <p class="line output heading">Student Research Assistant - AI4SOFTWAREENGINEERING</p>
+              <p class="line meta">Chair of Software Engineering, University of Rostock | Dec 2025 - Present</p>
+              <ul class="terminal-list">
+                <li>Research on how large language models can support software development</li>
+                <li>Focus on reverse requirements engineering and code understanding</li>
+                <li>Extraction of structured representations from source code using fine-tuned LLMs</li>
+              </ul>
+            </div>
+            <div class="entry">
+              <p class="line output heading">Student Teaching Assistant - Digital Teaching for Digital Systems</p>
+              <p class="line meta">Chair of Integrated Systems, University of Rostock | May 2025 - Nov 2025</p>
+              <ul class="terminal-list">
+                <li>Development of digital teaching materials</li>
+                <li>Support of courses in digital systems and computer engineering</li>
+                <li>Focus on accessible and didactically sound explanations</li>
+              </ul>
+            </div>
+            <div class="entry">
+              <p class="line output heading">Tutor - Juniorstudium (Junior Study Program)</p>
+              <p class="line meta">University of Rostock | Sep 2023 - Nov 2025</p>
+              <ul class="terminal-list">
+                <li>Teaching mathematics, programming, logic, and AI fundamentals</li>
+                <li>Preparation and execution of interactive excursions for school students</li>
+                <li>Emphasis on accessibility, curiosity, and conceptual understanding</li>
+              </ul>
+            </div>
+            <div class="entry">
+              <p class="line output heading">Part-Time Helper</p>
+              <p class="line meta">Bäckerei Junge | Jul 2020 - Sep 2022</p>
+              <ul class="terminal-list">
+                <li>Opening and closing shop, selling and preparing food</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="block">
+            <p class="line prompt"><span class="prompt-label">visitor@jan-terminal:~$</span> cat education.txt</p>
+            <p class="line output">M.Sc. Computer Science (part-time) | University of Rostock | since 2025</p>
+            <p class="line output">B.Sc. Computer Science | University of Rostock | 2020 - 2025</p>
+            <p class="line output">Abitur | Schulcampus Rostock-Evershagen | 2020</p>
+          </section>
+
+          <section class="block">
+            <p class="line prompt"><span class="prompt-label">visitor@jan-terminal:~$</span> cat volunteering.txt</p>
+            <ul class="terminal-list">
+              <li>Volunteer Work at the Kampfkunstakademie Rostock</li>
+              <li>Volunteer Work at Byte Challenge - a project of Gesellschaft für Informatik (e.V.)</li>
+            </ul>
+            <p class="line output">I see volunteering as an essential counterbalance to technical and academic work, keeping my perspective grounded in real human needs.</p>
+          </section>
+
+          <section class="block">
+            <p class="line prompt"><span class="prompt-label">visitor@jan-terminal:~$</span> cat values_and_interests.txt</p>
+            <ul class="terminal-list">
+              <li>Responsible and human-centered AI</li>
+              <li>Explainable and trustworthy machine learning</li>
+              <li>Technology &amp; society, AI governance, digital responsibility</li>
+              <li>Education, accessibility, and social good</li>
+            </ul>
+            <p class="line output">I like AI, but I like it even more when it genuinely helps people and other living beings.</p>
+          </section>
+
+          <section class="block">
+            <p class="line prompt"><span class="prompt-label">visitor@jan-terminal:~$</span> cat blog_topics.txt</p>
+            <ul class="terminal-list">
+              <li>Applied AI and software engineering</li>
+              <li>Explainable AI and ethics</li>
+              <li>Teaching experiences and learning processes</li>
+              <li>Daily life, interests, and projects I want to build</li>
+            </ul>
+          </section>
+
+          <section class="block">
+            <p class="line prompt"><span class="prompt-label">visitor@jan-terminal:~$</span> cat recent_personal_projects.txt</p>
+            <div class="entry">
+              <p class="line output heading">ESP32 Secure P2P Chat over ESP-NOW</p>
+              <p class="line output">A fully autonomous, encrypted, authenticated chat system between two ESP32 devices, with no Wi-Fi router, no internet, and no external infrastructure required.</p>
+              <p class="line output">Repository: private</p>
+            </div>
+            <div class="entry">
+              <p class="line output heading">Aria Assistant</p>
+              <p class="line output">Aria Assistant is a privacy-first, local-focused voice assistant for home automation, calendar, music, and web search. It uses fast rule-based processing for common tasks and falls back to a configurable LLM for complex queries, supporting local models for full control and flexibility.</p>
+              <p class="line output">Repository: <a href="https://github.com/jg512/aria-assistant" target="_blank" rel="noreferrer">github.com/jg512/aria-assistant</a></p>
+            </div>
+          </section>
+
+          <p class="line prompt final-line"><span class="prompt-label">visitor@jan-terminal:~$</span> <span class="cursor">_</span></p>
+        </div>
+      </div>
+    </section>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
